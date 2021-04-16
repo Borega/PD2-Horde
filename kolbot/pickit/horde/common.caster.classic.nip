@@ -1,0 +1,46 @@
+//-----------------------------------------------------------------------------------------------------
+// 
+//-----------------------------------------------------------------------------------------------------
+
+//belts 
+[type] == belt && [quality] < magic && [flag] != ethereal # # [tier] == 1
+[type] == belt && [class] == exceptional && [flag] != ethereal && [quality] < magic # # [tier] == 2
+[type] == belt && [class] == elite && [flag] != ethereal && [quality] < magic # # [tier] == 3
+[type] == belt && [quality] >= magic && [flag] != ethereal # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [tier] == (1 +  /*maxmana*/item.getStatEx(9)*0.5 + /*hpregen*/item.getStatEx(74) * 7 + /*maxhp*/item.getStatEx(7)*0.5 + /*fireresist*/item.getStatEx(39) * 2.4 + /*lightresist*/item.getStatEx(41) * 2.4 + /*coldresist*/item.getStatEx(43) * 2.4 + /*poisonresist*/item.getStatEx(45) * 0.8 + /*armorclass*/item.getStatEx(31) * 0.1)
+[type] == belt && [quality] >= magic && [name] != sash && [name] != lightbelt && [flag] != ethereal # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [tier] == (100 +  /*maxmana*/item.getStatEx(9)*0.5 + /*hpregen*/item.getStatEx(74) * 7 + /*maxhp*/item.getStatEx(7)*0.5 + /*fireresist*/item.getStatEx(39) * 2.4 + /*lightresist*/item.getStatEx(41) * 2.4 + /*coldresist*/item.getStatEx(43) * 2.4 + /*poisonresist*/item.getStatEx(45) * 0.8 + /*armorclass*/item.getStatEx(31) * 0.1)
+[type] == belt && [quality] >= magic && ([class] == exceptional || [class] == elite) && [flag] != ethereal # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [tier] == (200 +  /*maxmana*/item.getStatEx(9)*0.5 + /*hpregen*/item.getStatEx(74) * 7 + /*maxhp*/item.getStatEx(7)*0.5 + /*fireresist*/item.getStatEx(39) * 2.4 + /*lightresist*/item.getStatEx(41) * 2.4 + /*coldresist*/item.getStatEx(43) * 2.4 + /*poisonresist*/item.getStatEx(45) * 0.8 + /*armorclass*/item.getStatEx(31) * 0.1)
+
+//boots
+[type] == boots && [quality] < magic && [flag] != ethereal # # [tier] == 1
+[type] == boots && [class] == exceptional && [quality] < magic && [flag] != ethereal # # [tier] == 2
+[type] == boots && [class] == elite && [quality] < magic && [flag] != ethereal # # [tier] == 3
+[type] == boots && [quality] >= magic && [flag] != ethereal # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [tier] == (1 + /*maxmana*/item.getStatEx(9)*0.5 + /*hpregen*/item.getStatEx(74)*7 + /*maxhp*/item.getStatEx(7)*0.5 + /*item_magicbonus*/item.getStatEx(80)*1.8 + /*fireresist*/item.getStatEx(39)*2.4 + /*lightresist*/item.getStatEx(41)*2.4 + /*coldresist*/item.getStatEx(43)*2.4 + /*poisonresist*/item.getStatEx(45)*0.8 + /*armorclass*/item.getStatEx(31)*0.1)
+
+//gloves
+[type] == gloves && [quality] < magic && [flag] != ethereal # # [tier] == 1
+[type] == gloves && [class] == exceptional && [quality] < magic && [flag] != ethereal # # [tier] == 2
+[type] == gloves && [class] == elite && [quality] < magic && [flag] != ethereal # # [tier] == 3
+[type] == gloves && [quality] >= magic && [flag] != ethereal # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [tier] ==   (1 + /*maxmana*/item.getStatEx(9)*0.5 + /*hpregen*/item.getStatEx(74)*7 + /*maxhp*/item.getStatEx(7)*0.5 + /*item_magicbonus*/item.getStatEx(80)*1.8 + /*fireresist*/item.getStatEx(39)*2.4 + /*lightresist*/item.getStatEx(41)*2.4 + /*coldresist*/item.getStatEx(43)*2.4 + /*poisonresist*/item.getStatEx(45)*0.8 + /*armorclass*/item.getStatEx(31)*0.1)
+
+//helms
+[type] == helm && [quality] < magic && [flag] != ethereal # # [tier] == 1
+[type] == helm && [class] == exceptional && [quality] < magic && [flag] != ethereal # # [tier] == 2
+[type] == helm && [class] == elite && [quality] < magic && [flag] != ethereal # # [tier] == 3
+
+//armors
+[type] == armor && [quality] < magic && [flag] != ethereal # # [tier] == 1
+[type] == armor && [class] == exceptional && [quality] < magic && [flag] != ethereal # # [tier] == 2
+[type] == armor && [class] == elite && [quality] < magic && [flag] != ethereal # # [tier] == 3
+[type] == armor && ([quality] >= magic) && [flag] != ethereal # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [tier] == ( 1 + /*maxhp*/item.getStatEx(7)*0.5 + /*fireresist*/item.getStatEx(39)*2.4 + /*lightresist*/item.getStatEx(41)*2.4 + /*coldresist*/item.getStatEx(43)*2.4 + /*poisonresist*/item.getStatEx(45)*0.8 + /*armorclass*/item.getStatEx(31)*0.1 + /*fcr*/item.getStatEx(105)*5)
+
+//rings
+[type] == ring && [quality] >= magic # # [tier] == (1 +  /*hpregen*/item.getStatEx(74)*7 + /*fcr*/item.getStatEx(105)*5 + /*maxhp*/item.getStatEx(7)*0.5 + /*maxmana*/item.getStatEx(9)*0.5 + /*fireresist*/item.getStatEx(39)*2.4 + /*lightresist*/item.getStatEx(41)*2.4 + /*coldresist*/item.getStatEx(43)*2.4 + /*poisonresist*/item.getStatEx(45)*0.8) 
+
+[name] == ring && [quality] == unique # [itemmaxmanapercent] >= 25 # [tier] == 10000 //stone of jordan
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+// Weapon
+// meditationaura > ll > ias > res > damage
+([type] == spear || [type] == polearm) && [Quality] <= magic && [flag] != runeword # # [MercTier] == /*meditationaura*/((item.getStatEx(151,120)) * 10000) + /*lifeleech*/((item.getStatEx(60)) * 10000) + /*ias*/((item.getStatEx(93)) * 1000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 100) + /*maxdamage*/((item.getStatEx(24)) * 1)
+([type] == spear || [type] == polearm) && ([Quality] >= set || [flag] == runeword) # # [MercTier] == /*meditationaura*/((item.getStatEx(151,120)) * 1000000) + /*lifeleech*/((item.getStatEx(60)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*maxdamage*/((item.getStatEx(24)) * 1)
+
+//Insight progression normal to elite eth
+([type] == spear || [type] == polearm) && [flag] == runeword && [class] == normal # [meditationaura] >= 12 # [MercTier] == 50000000 + /*meditationaura*/((item.getStatEx(151,120)) * 1000000) + /*lifeleech*/((item.getStatEx(60)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*maxdamage*/((item.getStatEx(24)) * 1)
+([type] == spear || [type] == polearm) && [flag] == runeword && [class] == exceptional # [meditationaura] >= 12 # [MercTier] == 100000000 + /*meditationaura*/((item.getStatEx(151,120)) * 1000000) + /*lifeleech*/((item.getStatEx(60)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*maxdamage*/((item.getStatEx(24)) * 1)
+([type] == spear || [type] == polearm) && [flag] == runeword && [class] == elite  # [meditationaura] >= 12 # [MercTier] == 150000000 + /*meditationaura*/((item.getStatEx(151,120)) * 1000000) + /*lifeleech*/((item.getStatEx(60)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*maxdamage*/((item.getStatEx(24)) * 1)
+([type] == spear || [type] == polearm) && [flag] == runeword && [class] == elite && [flag] == ethereal # [meditationaura] >= 12 # [MercTier] == 200000000 + /*meditationaura*/((item.getStatEx(151,120)) * 1000000) + /*lifeleech*/((item.getStatEx(60)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*maxdamage*/((item.getStatEx(24)) * 1)
+
+//Infinity
+([type] == spear || [type] == polearm) && [flag] == runeword && [class] == elite && [flag] == ethereal # [convictionaura] >= 12 # [MercTier] == 500000000 + /*lifeleech*/((item.getStatEx(60)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*maxdamage*/((item.getStatEx(24)) * 1)
+
+// Head
+// ll > allsk > ias > str+dex > def
+[type] == helm && [Quality] <= magic && [flag] != runeword # # [MercTier] == /*lifeleech*/(item.getStatEx(60) * 10000) + /*allskill*/((item.getStatEx(127)) * 10000) + /*ias*/(item.getStatEx(93) * 1000) + /*str+dex*/((item.getStatEx(0) + item.getStatEx(2)) * 100) + /*defense*/(item.getStatEx(31) * 1)
+[type] == helm && ([Quality] >= set || [flag] == runeword) # # [MercTier] == /*lifeleech*/(item.getStatEx(60) * 100000) + /*allskill*/((item.getStatEx(127)) * 100000) + /*ias*/(item.getStatEx(93) * 10000) + /*str+dex*/((item.getStatEx(0) + item.getStatEx(2)) * 1000) + /*defense*/(item.getStatEx(31) * 1)
+
+// Armor
+// skill > ias > res > def
+[type] == armor && [Quality] <= magic && [flag] != runeword # # [MercTier] == /*all+anyclass*/((item.getStatEx(127) + item.getStatEx(83)) * 10000) + /*ias*/((item.getStatEx(93)) * 1000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 100) + /*defense*/((item.getStatEx(31)) * 1)
+[type] == armor && ([Quality] >= set || [flag] == runeword) # # [MercTier] == /*all+anyclass*/((item.getStatEx(127) + item.getStatEx(83)) * 100000) + /*ias*/((item.getStatEx(93)) * 10000) + /*fr+cr+lr*/((item.getStatEx(39) + item.getStatEx(41) + item.getStatEx(43)) * 1000) + /*defense*/((item.getStatEx(31)) * 1)
+[type] == armor && ([flag] == runeword)  # [ias] == 45 # [MercTier] == 50000000 //Treachery non eth 
+[type] == armor && ([flag] == runeword) && [flag] == ethereal # [ias] == 45 # [MercTier] == 100000000 //Treachery eth
+
+// Belt
+[type] == belt && [quality] < magic  # # [MercTier] == 1
+[type] == belt && [class] == exceptional && [quality] < magic  # # [MercTier] == 2
+[type] == belt && [class] == elite && [quality] < magic  # # [MercTier] == 3
+[type] == belt && [quality] >= magic  # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [MercTier] == (1 +  /*maxmana*/item.getStatEx(9)*0.1 + /*hpregen*/item.getStatEx(74) * 7 + /*maxhp*/item.getStatEx(7)*1 + /*fireresist*/item.getStatEx(39) * 2.4 + /*lightresist*/item.getStatEx(41) * 2.4 + /*coldresist*/item.getStatEx(43) * 2.4 + /*poisonresist*/item.getStatEx(45) * 0.8 + /*armorclass*/item.getStatEx(31) * 0.1)
+[type] == belt && [quality] >= magic && [name] != sash && [name] != lightbelt  # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [MercTier] == (100 +  /*maxmana*/item.getStatEx(9)*0.1 + /*hpregen*/item.getStatEx(74) * 7 + /*maxhp*/item.getStatEx(7)*1 + /*fireresist*/item.getStatEx(39) * 2.4 + /*lightresist*/item.getStatEx(41) * 2.4 + /*coldresist*/item.getStatEx(43) * 2.4 + /*poisonresist*/item.getStatEx(45) * 0.8 + /*armorclass*/item.getStatEx(31) * 0.1)
+[type] == belt && [quality] >= magic && ([class] == exceptional || [class] == elite) # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [MercTier] == (200 +  /*maxmana*/item.getStatEx(9)*0.1 + /*hpregen*/item.getStatEx(74) * 7 + /*maxhp*/item.getStatEx(7)*1 + /*fireresist*/item.getStatEx(39) * 2.4 + /*lightresist*/item.getStatEx(41) * 2.4 + /*coldresist*/item.getStatEx(43) * 2.4 + /*poisonresist*/item.getStatEx(45) * 0.8 + /*armorclass*/item.getStatEx(31) * 0.1)
+
+[name] == demonhidesash && [quality] == unique  # [damageresist] == 10 # [MercTier] == 1001 //string of ears
+[name] == demonhidesash && [quality] == unique  # [damageresist] == 11 # [MercTier] == 1002 //string of ears
+[name] == demonhidesash && [quality] == unique  # [damageresist] == 12 # [MercTier] == 1003 //string of ears
+[name] == demonhidesash && [quality] == unique  # [damageresist] == 13 # [MercTier] == 1004 //string of ears
+[name] == demonhidesash && [quality] == unique  # [damageresist] == 14 # [MercTier] == 1005 //string of ears
+[name] == demonhidesash && [quality] == unique  # [damageresist] == 15 # [MercTier] == 1006 //string of ears
+
+// Gloves
+[type] == gloves && [quality] < magic  # # [MercTier] == 1
+[type] == gloves && [class] == exceptional && [quality] < magic  # # [MercTier] == 2
+[type] == gloves && [class] == elite && [quality] < magic  # # [MercTier] == 3
+[type] == gloves && [quality] >= magic  # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [MercTier] ==   (1 + /*maxmana*/item.getStatEx(9)*0.1 + /*hpregen*/item.getStatEx(74)*7 + /*maxhp*/item.getStatEx(7)*1 + /*fireresist*/item.getStatEx(39)*2.4 + /*lightresist*/item.getStatEx(41)*2.4 + /*coldresist*/item.getStatEx(43)*2.4 + /*poisonresist*/item.getStatEx(45)*0.8 + /*armorclass*/item.getStatEx(31)*0.1)
+
+
+// Boots
+[type] == boots && [quality] < magic  # # [MercTier] == 1
+[type] == boots && [class] == exceptional && [quality] < magic  # # [MercTier] == 2
+[type] == boots && [class] == elite && [quality] < magic  # # [MercTier] == 3
+[type] == boots && [quality] >= magic  # ([durability] >=1 || [ItemReplenishDurability] >= 1 || [ItemIndestructible] >= 1) # [MercTier] == (1 + /*maxmana*/item.getStatEx(9)*0.1 + /*hpregen*/item.getStatEx(74)*7 + /*maxhp*/item.getStatEx(7)*1 + /*fireresist*/item.getStatEx(39)*2.4 + /*lightresist*/item.getStatEx(41)*2.4 + /*coldresist*/item.getStatEx(43)*2.4 + /*poisonresist*/item.getStatEx(45)*0.8 + /*armorclass*/item.getStatEx(31)*0.1)
+
+[name] == battleboots && [quality] == set  # # [MercTier] == 3000 //aldur
+[name] == demonhideboots && [quality] == unique  # # [MercTier] == 4000 // infernostride
+[name] == sharkskinboots && [quality] == unique  # # [MercTier] == 5000 //Waterwalks
+[name] == battleboots && [quality] == unique  # # [MercTier] == 10000 //War travellers
