@@ -42,10 +42,14 @@ function LoadConfig() {
 	 * 1 = item is unlocked and will be dropped, stashed or sold.
 	 * If you don't change the default values, the bot won't stash items.
 	 */
-	Config.Inventory[0] = [1,1,1,1,1,1,1,1,1,1];
-	Config.Inventory[1] = [1,1,1,1,1,1,1,1,1,1];
-	Config.Inventory[2] = [1,1,1,1,1,1,1,1,1,1];
-	Config.Inventory[3] = [1,1,1,1,1,1,1,1,1,1];
+	Config.Inventory[0] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[1] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[2] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[3] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[4] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[5] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[6] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+	Config.Inventory[7] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
 	Config.StashGold = 100000; // Minimum amount of gold to stash.
 
