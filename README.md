@@ -2,7 +2,8 @@
 Horde Team leveling for PD2 Private Realm
 I prly wont push updates on this. There will not be alot of support. Feel free to fork and submit pull requests with changes.
 Use a clean PD2BS Copy and delete the Kolbot folder in it. Then Copy over this Kolbot folder.
-
+Youtube tutorial for the original Horde: https://www.youtube.com/watch?v=A5_6RN-miF0
+This does not cover downloading PD2BS and such!!
 Original Readme:
 ______   _____   _____  ___  ___          _   _   _____  ______  ______   _____ 
 |  _  \ / __  \ |  __ \ |  \/  |  _   _  | | | | |  _  | | ___ \ |  _  \ |  ___|
