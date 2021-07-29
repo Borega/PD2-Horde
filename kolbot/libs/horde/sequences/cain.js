@@ -64,7 +64,7 @@ function cain(mfRun) { // Dark-f: rewrite rescue cain
 				Precast.doPrecast(true);
 				Buff.Bo();
 				Pather.teleport = false;
-				Pather.moveToPreset(me.area, 1, 890, 0, 0, true, true); //move to tree
+				Pather.moveToPreset(me.area, 1, 923, 0, 0, true, true); //move to tree
 				Attack.clear(40); // treehead
 
 				if (Role.teleportingChar) {
@@ -119,7 +119,7 @@ function cain(mfRun) { // Dark-f: rewrite rescue cain
 		Precast.doPrecast(true);
 
 		Buff.Bo();
-		Pather.moveToPreset(me.area, 1, 889, 0, 0, true, true);
+		Pather.moveToPreset(me.area, 1, 922, 0, 0, true, true);
 		try{
 			Attack.clear(15, 0, getLocaleString(2872));// Rakanishu
 		} catch (e) {

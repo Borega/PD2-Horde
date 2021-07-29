@@ -35,7 +35,7 @@ function trist(mfRun) {
 
 	Precast.doPrecast(true);
 	Buff.Bo();
-	Pather.moveToPreset(me.area, 1, 889, 0, 0, true, true);
+	Pather.moveToPreset(me.area, 1, 922, 0, 0, true, true);
 
 	try{
 		Attack.clear(20, 0, getLocaleString(2872)); // Rakanishu
@@ -43,7 +43,7 @@ function trist(mfRun) {
 		Attack.clear(25);
 	}
 
-	Pather.moveToPreset(me.area, 1, 889, 0, 0, true, false); // Move back to stones after clearing.
+	Pather.moveToPreset(me.area, 1, 922, 0, 0, true, false); // Move back to stones after clearing.
 
 	for (i = 0; i < 5; i += 1) {
 		if (Pather.usePortal(38)) {
