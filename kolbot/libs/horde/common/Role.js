@@ -136,10 +136,10 @@ var Role = {
 			if (this.canCreateTp()) {
 				scrollsCount = this.getTpTome().getStat(70);
 				print("backToTown: have " + scrollsCount + " scrolls");
-				if (scrollsCount === 20) {
-					waitTime = HordeSystem.getTeamIndex(me.profile) * 50;// we wait [0;400] depending on our index in the team profiles.
+				if (scrollsCount === 80) {
+					waitTime = HordeSystem.getTeamIndex(me.profile) * 50 + 50;// we wait [0;400] depending on our index in the team profiles.
 				} else {
-					waitTime = 400 + 30 * (20-scrollsCount);//we're not full of scrolls, wait [400;1000] depending on how many scrolls we have
+					waitTime = 400 + 30 * (80-scrollsCount);//we're not full of scrolls, wait [400;1000] depending on how many scrolls we have
 				}
 			}
 			
@@ -225,7 +225,7 @@ var Role = {
 				MercTools.hireMerc(2, HordeSystem.build.mercAct2Normal, false, 2);
 				
 				// make sure our merc can get levels
-				if (Party.lowestAct == 5) {
+				if (Party.lowestAct === 5) {
 					let merc = me.getMerc();
 
 					if (merc && merc.charlvl < 25 && me.charlvl >= 28) {
@@ -241,7 +241,7 @@ var Role = {
 			{
 				MercTools.hireMerc(2, HordeSystem.build.mercAct2Nightmare, false, 2);
 				
-				if (Party.lowestAct == 5) {
+				if (Party.lowestAct === 5) {
 					let merc = me.getMerc();
 
 					if (merc && merc.charlvl <= me.charlvl - 10) {
